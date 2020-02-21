@@ -1,0 +1,298 @@
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dboeLex: <http://localhost/lexicon/dboe>
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix decomp: <http://www.w3.org/ns/lemon/decomp#> .
+@prefix doco:<http://purl.org/spar/doco/>.
+@prefix fabio:<http://purl.org/spar/fabio/>. 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lemon: <http://lemon-model.net/lemon#>.
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>.
+@prefix lime: <http://www.w3.org/ns/lemon/lime#> .
+@prefix oils: <http://lemon-model.net/oils#>.
+@prefix oldcan: <https://explorations4u.acdh.oeaw.ac.at/ontology/oldcan#>.
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix prism:<http://prismstandard.org/namespaces/basic/2.0/>. 
+@prefix provo: <http://www.w3.org/ns/prov#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix schema:<http://schema.org/>.
+@prefix semiotics: <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos#>.
+@prefix synsem: <http://www.w3.org/ns/lemon/synsem#> .
+@prefix vartrans: <http://www.w3.org/ns/lemon/vartrans#> .
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+
+
+
+# This creates a lexicon called WBOLexicon
+# Please provide the name you would like to call this lexicon.
+# Created by Yalemisw Abgaz (yalemisew.abgaz@adaptcentre.ie)
+
+
+#This mapping also creates an entry and link each entry with the lexicon using ontolex:entry
+<#LexiconEntryTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select  'WBOLexicon' as lexicon, e.id, e.lang
+from entry e ;
+
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/{lexicon}" ;
+		rr:class ontolex:Lexicon ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:language ;
+		rr:objectMap [ rr:column "lang" ] ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+	
+		
+	rr:predicateObjectMap [
+		rr:predicate ontolex:entry;
+		rr:objectMap [ 
+			rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+		];
+.
+
+
+
+# This creates a lexical entry and attach the lexical form, cannonical form to it
+<#LexicalEntryCannonicalFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select  e.id, e.lang, f.entry_id, f.form_id from entry e
+left join form f on e.entry_id = f.entry_id
+where f.type ='hauptlemma';
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;	
+		rr:predicate ontolex:cannonicalForm ;	
+		rr:objectMap [
+			rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+				rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+				] ;	
+.
+
+# This creates a lexical entry and attach the lexical form, and the other form to it
+<#LexicalEntryOtherFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select  e.id, e.lang, f.entry_id, f.form_id from entry e
+left join form f on e.entry_id = f.entry_id
+where f.type <>'hauptlemma';
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;	
+		rr:predicate ontolex:otherForm ;	
+		rr:objectMap [
+			rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+				rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph>; ];
+				] ;	
+.
+
+
+<#FormTriplesMapNormalised>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select o.orth_id, o.type, o.orth, f.form_id from
+form f inner join orth o on f.form_id =o.form_id
+where o.type<>'orig' ;
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+	rr:predicateObjectMap [
+		rr:predicate ontolex:writtenRep ;
+		rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+
+		rr:predicateObjectMap [
+			rr:predicate rdfs:label;
+			rr:predicate skos:preflabel;
+			rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+			rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+
+.
+
+<#FormTriplesMapOriginal>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select o.orth_id, o.type, o.orth, f.form_id from
+form f inner join orth o on f.form_id =o.form_id
+where o.type='orig';
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+	
+		rr:predicateObjectMap [
+			rr:predicate skos:altlabel;
+			rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+			rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+.
+
+
+
+<#FormTriplesMapPronunciationIPA>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+SELECT pron,notation, form_id FROM pronunciation where notation='ipa';
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+	#Check how the phonetic representation can be represented here
+	rr:predicateObjectMap [
+		rr:predicate ontolex:phoneticRep ;
+		rr:objectMap [ rr:column "pron";
+		rr:language "ipa"; ] ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+
+.
+
+<#FormTriplesMapPronunciationTustep>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+SELECT pron,notation, form_id FROM pronunciation where notation='Tustep';
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+	#Check how the phonetic representation can be represented here
+	rr:predicateObjectMap [
+		rr:predicate ontolex:phoneticRep ;
+		rr:objectMap [ rr:column "pron";
+		rr:language "tustep"; ] ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+
+.
+
+
+# This creates a lexical entry and attach the sense  to it
+<#LexicalEntrySenseTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select e.id, s.sense_id from
+entry e inner join sense s on e.entry_id= s.entry_id;
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:sense ;	
+		rr:objectMap [
+			rr:template "https://exploreat.oeaw.ac.at/Sense/{sense_id}" ;
+				rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+				] ;	
+.
+
+<#SenseTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select s.sense_id, sense_definition from Sense s left join sense_definition sd
+on s.sense_id =sd.sense_id;
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/Sense/{sense_id}" ;
+		rr:class ontolex:LexicalSense ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+	
+	rr:predicateObjectMap [
+		rr:predicate dct:description ;
+		rr:objectMap [ rr:column "sense_definition";
+		rr:language "de"; ] ; # "de is used in all the columns" 
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+
+.
+
+#This mapping generates the part of speech of the entries
+<#LexicalEntryPOSTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+SELECT  e.id,
+CASE pos
+WHEN  'Verb' THEN 'verb'
+WHEN   'subst' THEN 'noun'
+WHEN   'Pron' THEN 'pronoun'
+WHEN   'adv' THEN 'adverb'
+WHEN   'adj' THEN 'adjective'
+WHEN   'interj' THEN 'interjection'
+WHEN   'num' THEN 'numeral'
+WHEN   'conj' THEN 'conjuction'
+WHEN   'prep' THEN 'verb'
+WHEN   'subst' THEN 'fusedPreposition'
+ELSE 'Unknown'
+END lexinfopos
+from grammar_group g left join entry e on g.entry_id =e.entry_id;
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate lexinfo:partOfSpeech ;	
+		rr:objectMap [
+			rr:template "http://www.lexinfo.net/ontology/2.0/lexinfo#{lexinfopos}" ;];
+			rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+.
+
+
+<#SenseTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+select e.entry_id , SUBSTRING_INDEX(SUBSTRING_INDEX(r.ref, ':', 1), ',', -1) as FragNo #Extract the number before the : which represent the question Number
+from entry e inner join reference r
+on e.entry_id =r.entry_id
+where r.type="fragebogenNummer";
+
+
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{entry_id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;] ;
+	
+	rr:predicateObjectMap [
+		rr:predicate oldcan:isAnswerOf;
+		rr:objectMap [ rr:column "FragNo";
+		rr:language "de"; ] ; # "de is used in all the columns" 
+		rr:graph <https://exploreat.oeaw.ac.at/WBOLexicon_graph> ;];
+
+.
+

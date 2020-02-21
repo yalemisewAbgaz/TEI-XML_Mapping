@@ -1,0 +1,794 @@
+@base <file:///Users/yalemisew/ExploreAt/2017_Experiment_Data/MappingDBOE/AllMapping/ALL_TEI_XML/output_TEI_XML_V3.ttl_1> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dboeLex: <http://localhost/lexicon/dboe> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix decomp: <http://www.w3.org/ns/lemon/decomp#> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lime: <http://www.w3.org/ns/lemon/lime#> .
+@prefix oldcan: <https://explorations4u.acdh.oeaw.ac.at/ontology/oldcan#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos#> .
+@prefix synsem: <http://www.w3.org/ns/lemon/synsem#> .
+@prefix vartrans: <http://www.w3.org/ns/lemon/vartrans#> .
+@prefix wbo: <https://exploreat.oeaw.ac.at/> .
+
+<https://exploreat.oeaw.ac.at/Form/1>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "'s Oberhaus"@ipa, "'s Oberhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/10>
+    a ontolex:Form ;
+    rdfs:label "Häupoden"@bar ;
+    skos:altlabel "(H-äu)poden"@bar ;
+    skos:preflabel "Häupoden"@bar ;
+    ontolex:phoneticRep "h;oub~on"@ipa, "h;oub~on"@tustep ;
+    ontolex:writtenRep "Häupoden"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/11>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "Oberhaus"@ipa, "Oberhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/12>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "owAhaos"@ipa, "owAhaos"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/13>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "-owAh-aus"@ipa, "-owAh-aus"@tustep, "-ówAhaus"@ipa, "-ówAhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/14>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "ówEhaus"@ipa, "ówEhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/16>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar, "Obernhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar, "(Obern)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar, "Obernhaus"@bar ;
+    ontolex:phoneticRep "s -..ow~An hâ;us"@ipa, "s -..ow~An hâ;us"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar, "Obernhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/17>
+    a ontolex:Form ;
+    rdfs:label "Obleihaus"@bar ;
+    skos:altlabel "(Obl-ei)haus"@bar ;
+    skos:preflabel "Obleihaus"@bar ;
+    ontolex:phoneticRep "oblaihaus"@ipa, "oblaihaus"@tustep ;
+    ontolex:writtenRep "Obleihaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/18>
+    a ontolex:Form ;
+    rdfs:label "Obleihaus"@bar ;
+    skos:altlabel "(Obl-ei)haus"@bar ;
+    skos:preflabel "Obleihaus"@bar ;
+    ontolex:phoneticRep "oblaihaus"@ipa, "oblaihaus"@tustep ;
+    ontolex:writtenRep "Obleihaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/19>
+    a ontolex:Form ;
+    rdfs:label "Ödhaus"@bar ;
+    skos:altlabel "(<Öd)haus"@bar ;
+    skos:preflabel "Ödhaus"@bar ;
+    ontolex:phoneticRep "Edhausl"@ipa, "Edhausl"@tustep ;
+    ontolex:writtenRep "Ödhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/2>
+    a ontolex:Form ;
+    rdfs:label "Soller"@bar ;
+    skos:preflabel "Soller"@bar ;
+    ontolex:phoneticRep "Solar"@ipa, "Solar"@tustep ;
+    ontolex:writtenRep "Soller"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/20>
+    a ontolex:Form ;
+    rdfs:label "Ölhaus"@bar ;
+    skos:altlabel "(Öl)haus"@bar ;
+    skos:preflabel "Ölhaus"@bar ;
+    ontolex:phoneticRep ")Ölh-ous"@ipa, ")Ölh-ous"@tustep ;
+    ontolex:writtenRep "Ölhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/21>
+    a ontolex:Form ;
+    rdfs:label "Ofenhaus"@bar ;
+    skos:altlabel "(Ofen)haus"@bar ;
+    skos:preflabel "Ofenhaus"@bar ;
+    ontolex:phoneticRep "ofenhaus"@ipa, "ofenhaus"@tustep ;
+    ontolex:writtenRep "Ofenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/22>
+    a ontolex:Form ;
+    rdfs:label "Ofenhaus"@bar ;
+    skos:altlabel "(Ofen)haus"@bar ;
+    skos:preflabel "Ofenhaus"@bar ;
+    ontolex:phoneticRep "Das Ofenhäuslein"@ipa, "Das Ofenhäuslein"@tustep ;
+    ontolex:writtenRep "Ofenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/23>
+    a ontolex:Form ;
+    rdfs:label "Pachofenhaus"@bar ;
+    skos:altlabel "(Pach─ofen)haus"@bar ;
+    skos:preflabel "Pachofenhaus"@bar ;
+    ontolex:phoneticRep "B¡oachuoafmhais'l"@ipa, "B¡oachuoafmhais'l"@tustep ;
+    ontolex:writtenRep "Pachofenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/24>
+    a ontolex:Form ;
+    rdfs:label "Pachofenhaus"@bar ;
+    skos:altlabel "(Pach─ofen)haus"@bar ;
+    skos:preflabel "Pachofenhaus"@bar ;
+    ontolex:writtenRep "Pachofenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/25>
+    a ontolex:Form ;
+    rdfs:label "Ordenshaus"@bar ;
+    skos:altlabel "(Ordens)haus"@bar ;
+    skos:preflabel "Ordenshaus"@bar ;
+    ontolex:writtenRep "Ordenshaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/26>
+    a ontolex:Form ;
+    rdfs:label "Abgeordnetenhaus"@bar ;
+    skos:altlabel "(Ab─ge─ordneten)haus"@bar ;
+    skos:preflabel "Abgeordnetenhaus"@bar ;
+    ontolex:phoneticRep "\"Abgeordneten─haus\""@ipa, "\"Abgeordneten─haus\""@tustep ;
+    ontolex:writtenRep "Abgeordnetenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/27>
+    a ontolex:Form ;
+    rdfs:label "Abgeordnetenhaus"@bar ;
+    skos:altlabel "(Ab─ge─ordneten)haus"@bar ;
+    skos:preflabel "Abgeordnetenhaus"@bar ;
+    ontolex:phoneticRep ";o'pk;iu¡atntnhà¡us"@ipa, ";o'pk;iu¡atntnhà¡us"@tustep ;
+    ontolex:writtenRep "Abgeordnetenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/28>
+    a ontolex:Form ;
+    rdfs:label "Abgeordnetenhaus"@bar ;
+    skos:altlabel "(Ab─ge─ordneten)haus"@bar ;
+    skos:preflabel "Abgeordnetenhaus"@bar ;
+    ontolex:phoneticRep ";obgèor'nè'nhaos"@ipa, ";obgèor'nè'nhaos"@tustep ;
+    ontolex:writtenRep "Abgeordnetenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/29>
+    a ontolex:Form ;
+    rdfs:label "Orfenhaus"@bar ;
+    skos:altlabel "(Orfen)haus"@bar ;
+    skos:preflabel "Orfenhaus"@bar ;
+    ontolex:phoneticRep "orfanhaus *"@ipa, "orfanhaus *"@tustep ;
+    ontolex:writtenRep "Orfenhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/3>
+    a ontolex:Form ;
+    rdfs:label "oben"@bar ;
+    skos:preflabel "oben"@bar ;
+    ontolex:writtenRep "oben"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/30>
+    a ontolex:Form ;
+    rdfs:label "Orthaus"@bar ;
+    skos:altlabel "(Ort)haus"@bar ;
+    skos:preflabel "Orthaus"@bar ;
+    ontolex:phoneticRep "Oa¡rthaus"@ipa, "Oa¡rthaus"@tustep ;
+    ontolex:writtenRep "Orthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/31>
+    a ontolex:Form ;
+    rdfs:label "Aborthaus"@bar ;
+    skos:altlabel "(Ab─ort)haus"@bar ;
+    skos:preflabel "Aborthaus"@bar ;
+    ontolex:phoneticRep "\"Abort─haus\""@ipa, "\"Abort─haus\""@tustep, "--"@ipa, "--"@tustep ;
+    ontolex:writtenRep "Aborthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/32>
+    a ontolex:Form ;
+    rdfs:label "Aborthaus"@bar ;
+    skos:altlabel "(Ab─ort)haus"@bar ;
+    skos:preflabel "Aborthaus"@bar ;
+    ontolex:phoneticRep "Abortheisl"@ipa, "Abortheisl"@tustep ;
+    ontolex:writtenRep "Aborthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/33>
+    a ontolex:Form ;
+    rdfs:label "Raderhaus"@bar ;
+    skos:altlabel "(Rader)haus"@bar ;
+    skos:preflabel "Raderhaus"@bar ;
+    ontolex:phoneticRep "Raderhauss"@ipa, "Raderhauss"@tustep ;
+    ontolex:writtenRep "Raderhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/34>
+    a ontolex:Form ;
+    rdfs:label "Rasthaus"@bar ;
+    skos:altlabel "(Rast)haus"@bar ;
+    skos:preflabel "Rasthaus"@bar ;
+    ontolex:phoneticRep "rasthaus *"@ipa, "rasthaus *"@tustep ;
+    ontolex:writtenRep "Rasthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/35>
+    a ontolex:Form ;
+    rdfs:label "Râthaus"@bar ;
+    skos:altlabel "(Rât)haus"@bar ;
+    skos:preflabel "Râthaus"@bar ;
+    ontolex:phoneticRep "Råthaus"@ipa, "Råthaus"@tustep ;
+    ontolex:writtenRep "Râthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/36>
+    a ontolex:Form ;
+    rdfs:label "Râthaus"@bar ;
+    skos:altlabel "(Rât)haus"@bar ;
+    skos:preflabel "Râthaus"@bar ;
+    ontolex:phoneticRep "\"Rathaus\""@ipa, "\"Rathaus\""@tustep, "rathhauss"@ipa, "rathhauss"@tustep, "rathhauß"@tustep, "ratthauss"@ipa, "ratthauss"@tustep, "ratthauß"@tustep ;
+    ontolex:writtenRep "Râthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/37>
+    a ontolex:Form ;
+    rdfs:label "Râthaus"@bar ;
+    skos:altlabel "(Rât)haus"@bar ;
+    skos:preflabel "Râthaus"@bar ;
+    ontolex:writtenRep "Râthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/38>
+    a ontolex:Form ;
+    rdfs:label "Râthaus"@bar ;
+    skos:altlabel "(Rât)haus"@bar ;
+    skos:preflabel "Râthaus"@bar ;
+    ontolex:phoneticRep "r;athaus"@ipa, "r;athaus"@tustep ;
+    ontolex:writtenRep "Râthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/39>
+    a ontolex:Form ;
+    rdfs:label "Râthaus"@bar ;
+    skos:altlabel "(Rât)haus"@bar ;
+    skos:preflabel "Râthaus"@bar ;
+    ontolex:phoneticRep "serb. rathauz"@ipa, "serb. rathauz"@tustep ;
+    ontolex:writtenRep "Râthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/4>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "owAhaus"@ipa, "owAhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/40>
+    a ontolex:Form ;
+    rdfs:label "Râthaus"@bar ;
+    skos:altlabel "(Rât)haus"@bar ;
+    skos:preflabel "Râthaus"@bar ;
+    ontolex:phoneticRep "Rådhaus"@ipa, "Rådhaus"@tustep ;
+    ontolex:writtenRep "Râthaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/42>
+    a ontolex:Form ;
+    rdfs:label ""@bar, "Patschek"@bar, "patschektreiben"@bar, "patschkotreiben"@bar ;
+    skos:altlabel ""@bar, "(p.atschek)treiben"@bar, "(p.atschko)treiben"@bar, "P.atschek"@bar ;
+    skos:preflabel ""@bar, "Patschek"@bar, "patschektreiben"@bar, "patschkotreiben"@bar ;
+    ontolex:phoneticRep "bátschgodrai¡b-m"@ipa, "bátschgodrai¡b-m"@tustep ;
+    ontolex:writtenRep ""@bar, "Patschek"@bar, "patschektreiben"@bar, "patschkotreiben"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/5>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "owerhaus"@ipa, "owerhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/6>
+    a ontolex:Form ;
+    rdfs:label "hôh"@bar ;
+    skos:preflabel "hôh"@bar ;
+    ontolex:writtenRep "hôh"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/7>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "Oberhaus"@ipa, "Oberhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/8>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "Ob[à]~e~rhaus"@tustep, "Ob~e~rhaus"@ipa ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/Form/9>
+    a ontolex:Form ;
+    rdfs:label "Oberhaus"@bar ;
+    skos:altlabel "(Ober)haus"@bar ;
+    skos:preflabel "Oberhaus"@bar ;
+    ontolex:phoneticRep "owAhaus"@ipa, "owAhaus"@tustep ;
+    ontolex:writtenRep "Oberhaus"@bar .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/10>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "EFb.2/3"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/11>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "EFb.2/3"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/18>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "15D10"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/22>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "28A1 (12)"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/29>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "14A4"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/31>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "EFb.7/46"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/39>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "92A3"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/4>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "92F13"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/40>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "69G8"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/5>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "92F13"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/7>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "EFb.2/3"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/8>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "EFb.2/3"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/9>
+    a ontolex:LexicalEntry ;
+    oldcan:isAnswerOf "EFb.2/3"@de .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/d175_qdb-d1e68679>
+    lexinfo:partOfSpeech lexinfo:verb ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/41> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/41>, <https://exploreat.oeaw.ac.at/Form/42> ;
+    ontolex:otherForm <https://exploreat.oeaw.ac.at/Form/42> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/27> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e108>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/4> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/4> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e129>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/5> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/5> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/3> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e152>
+    lexinfo:partOfSpeech lexinfo:adjective ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/6> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/6> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e192>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/7> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/7> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/4> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e2>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/1> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/1> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/1> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e215>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/8> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/8> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/5> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e238>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/9> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/9> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/6> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e261>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/10> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/10> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/7> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e284>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/11> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/11> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/8> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e308>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/12> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/12> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e329>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/13> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/13> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/9> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e354>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/14> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/14> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/10> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e38>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/2> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/2> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/2> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e386>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/15> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/15>, <https://exploreat.oeaw.ac.at/Form/16> ;
+    ontolex:otherForm <https://exploreat.oeaw.ac.at/Form/16> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/11> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e409>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/17> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/17> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e430>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/18> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/18> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e455>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/19> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/19> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/12> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e478>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/20> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/20> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/13> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e499>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/21> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/21> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/14> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e524>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/22> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/22> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/15> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e547>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/23> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/23> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/16> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e569>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/24> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/24> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e592>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/25> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/25> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e615>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/26> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/26> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/17> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e640>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/27> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/27> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/18> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e668>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/28> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/28> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/19> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e689>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/29> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/29> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/20> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e712>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/30> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/30> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/21> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e72>
+    lexinfo:partOfSpeech lexinfo:adverb ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/3> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/3> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e733>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/31> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/31> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/22>, <https://exploreat.oeaw.ac.at/Sense/23> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e765>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/32> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/32> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/24> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e788>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/33> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/33> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e819>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/34> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/34> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/25> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e848>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/35> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/35> ;
+    ontolex:sense <https://exploreat.oeaw.ac.at/Sense/26> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e873>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/36> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/36> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e911>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/37> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/37> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e938>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/38> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/38> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e957>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/39> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/39> .
+
+<https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e978>
+    lexinfo:partOfSpeech lexinfo:noun ;
+    a ontolex:LexicalEntry ;
+    ontolex:cannonicalForm <https://exploreat.oeaw.ac.at/Form/40> ;
+    ontolex:lexicalForm <https://exploreat.oeaw.ac.at/Form/40> .
+
+<https://exploreat.oeaw.ac.at/Sense/1>
+    dct:description "das obere Stockwerk"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "das obere Stockwerk"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/10>
+    dct:description "Dachbodenraum; Dachboden"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Dachbodenraum; Dachboden"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/11>
+    dct:description "Vorhaus im ersten Stock"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Vorhaus im ersten Stock"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/12>
+    dct:description "Häusl bei Strengberg"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Häusl bei Strengberg"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/13>
+    dct:description "Ölhaus = Haus, wo Hanf und Graupen gestampft wurden"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Ölhaus = Haus, wo Hanf und Graupen gestampft wurden"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/14>
+    dct:description "Bäckerei"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Bäckerei"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/15>
+    dct:description "gewölbte Höhlung unter dem Ofen"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "gewölbte Höhlung unter dem Ofen"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/16>
+    dct:description "Bachofenhäus'chen"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Bachofenhäus'chen"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/17>
+    dct:description "Parlament"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Parlament"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/18>
+    dct:description "Abgeordnetenhaus"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Abgeordnetenhaus"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/19>
+    dct:description "Abgeordnetenhaus in Linz"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Abgeordnetenhaus in Linz"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/2>
+    dct:description "das obere Stockwerk"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "das obere Stockwerk"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/20>
+    dct:description "orfanotrofio"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "orfanotrofio"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/21>
+    dct:description "das erste Haus am Ortsaus- od. Eingang"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "das erste Haus am Ortsaus- od. Eingang"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/22>
+    dct:description "öffentliche Toilette"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "öffentliche Toilette"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/23>
+    dct:description "Abort"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Abort"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/24>
+    dct:description "Abort"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Abort"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/25>
+    dct:description "stazione della poste e simili"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "stazione della poste e simili"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/26>
+    dct:description "Rathaus"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Rathaus"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/27>
+    dct:description "ein beiderseits spitz zugeschnittener Bolzen wird mit einem Schlagbrett ..."@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "ein beiderseits spitz zugeschnittener Bolzen wird mit einem Schlagbrett ..."@de .
+
+<https://exploreat.oeaw.ac.at/Sense/3>
+    dct:description "Dachboden"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Dachboden"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/4>
+    dct:description "Speicher"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Speicher"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/5>
+    dct:description "Speicher"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Speicher"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/6>
+    dct:description "Speicher"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Speicher"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/7>
+    dct:description "Speicher"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Speicher"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/8>
+    dct:description "Speicher"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "Speicher"@de .
+
+<https://exploreat.oeaw.ac.at/Sense/9>
+    dct:description "\"Oberhaus\": Dachboden; Der Raum unterm Dach"@de ;
+    a ontolex:LexicalSense ;
+    skos:definition "\"Oberhaus\": Dachboden; Der Raum unterm Dach"@de .
+
+wbo:WBOLexicon
+    a ontolex:Lexicon ;
+    ontolex:entry <https://exploreat.oeaw.ac.at/LexicalEntry/d175_qdb-d1e68679>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e108>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e129>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e152>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e192>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e2>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e215>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e238>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e261>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e284>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e308>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e329>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e354>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e38>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e386>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e409>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e430>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e455>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e478>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e499>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e524>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e547>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e569>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e592>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e615>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e640>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e668>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e689>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e712>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e72>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e733>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e765>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e788>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e819>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e848>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e873>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e911>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e938>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e957>, <https://exploreat.oeaw.ac.at/LexicalEntry/h385_qdb-d1e978> ;
+    ontolex:language "bar" .
+

@@ -1,0 +1,220 @@
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dboeLex: <http://localhost/lexicon/dboe>
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix decomp: <http://www.w3.org/ns/lemon/decomp#> .
+@prefix doco:<http://purl.org/spar/doco/>.
+@prefix fabio:<http://purl.org/spar/fabio/>. 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lemon: <http://lemon-model.net/lemon#>.
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>.
+@prefix lime: <http://www.w3.org/ns/lemon/lime#> .
+@prefix oils: <http://lemon-model.net/oils#>.
+@prefix oldcan: <https://explorations4u.acdh.oeaw.ac.at/ontology/oldcan#>.
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix prism:<http://prismstandard.org/namespaces/basic/2.0/>. 
+@prefix provo: <http://www.w3.org/ns/prov#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix schema:<http://schema.org/>.
+@prefix semiotics: <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos#>.
+@prefix synsem: <http://www.w3.org/ns/lemon/synsem#> .
+@prefix vartrans: <http://www.w3.org/ns/lemon/vartrans#> .
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+
+
+
+#Lexicon Mapping goes here 
+#This creates a lexicon called WBOLexiconExample
+
+/*<#LexiconTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select  'WBOLexiconExample' as lexicon, e.lang
+from entry e
+limit 1;
+    """ ];
+	rr:subjectMap [
+		rr:template "http://exploreat.adaptcentre.ie/{lexicon}" ;
+		rr:class ontolex:Lexicon ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;
+
+	rr:predicateObjectMap [
+		rr:predicate ontolex:language ;
+		rr:objectMap [ rr:column "lang" ] ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;];
+
+.*/
+
+
+#This creates an entry and link each entry with the lexicon using ontolex:entry
+<#LexiconEntryTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select  'WBOLexiconExample' as lexicon, e.id, e.lang
+from entry e ;
+
+    """ ];	
+	rr:subjectMap [
+		rr:template "http://exploreat.adaptcentre.ie/{lexicon}" ;
+		rr:class ontolex:Lexicon ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:language ;
+		rr:objectMap [ rr:column "lang" ] ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;];
+	
+		
+	rr:predicateObjectMap [
+		rr:predicate ontolex:entry;
+		rr:objectMap [ 
+			rr:template "http://exploreat.adaptcentre.ie/LexicalEntry/{id}" ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;
+		];
+.
+
+# This creates a lexical entry and attach the lexical form, cannonical form to it
+<#LexicalEntryCannonicalFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select  e.id, e.lang, f.entry_id, f.form_id from entry e
+left join form f on e.entry_id = f.entry_id
+where f.type ='hauptlemma';
+    """ ];	
+	rr:subjectMap [
+		rr:template "http://exploreat.adaptcentre.ie/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;	
+		rr:predicate ontolex:cannonicalForm ;	
+		rr:objectMap [
+			rr:template "http://exploreat.adaptcentre.ie/LexicalForm/{form_id}" 
+				rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ]]] ;	
+.
+
+# This creates a lexical entry and attach the lexical form, cannonical form to it
+<#LexicalEntryOtherFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select  e.id, e.lang, f.entry_id, f.form_id from entry e
+left join form f on e.entry_id = f.entry_id
+where f.type <>'hauptlemma';
+    """ ];	
+	rr:subjectMap [
+		rr:template "http://exploreat.adaptcentre.ie/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;	
+		rr:predicate ontolex:otherForm ;	
+		rr:objectMap [
+			rr:template "http://exploreat.adaptcentre.ie/LexicalForm/{form_id}" 
+				rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ]]] ;	
+.
+
+/*<#CannonicalFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select  f.form_id, o.orth_id, o.orth, o.type as orthType,
+ e.lang ,f.entry_id, e.id  as e_id, f.type
+from entry e
+left  join form f on e.entry_id = f.entry_id
+inner join orth o on o.form_id= f.form_id
+where
+f.type = 'hauptlemma' and
+ (o.type='' or o.type='orig') limit 20;
+    """ ];
+	rr:subjectMap [
+		rr:template "http://exploreat.adaptcentre.ie/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;
+	rr:predicateObjectMap [
+		rr:predicate ontolex:writtenRep ;
+		rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;];
+
+		rr:predicateObjectMap [
+			rr:predicate rdfs:label;
+			rr:predicate skos:preflabel;
+			rr:objectMap [ rr:column "orth" ;rr:language "de";] ;
+			rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;
+
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;
+		rr:predicate ontolex:cannonicalForm ;
+		rr:objectMap [
+			rr:parentTriplesMap <#LexicalEntryTriplesMap> ;
+			rr:joinCondition [
+				rr:child "e_id" ;
+				rr:parent "id" ;
+				rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ]]] ;
+.
+
+<#OtherFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select  f.form_id, o.orth_id, o.orth, o.type as orthType, e.lang ,f.entry_id, e.id  as e_id, f.type
+from entry e
+left  join form f on e.entry_id = f.entry_id
+inner join orth o on o.form_id= f.form_id
+where
+f.type <> 'hauptlemma' and
+(o.type='' or o.type='orig') limit 20;
+    """ ];
+	rr:subjectMap [
+		rr:template "http://exploreat.adaptcentre.ie/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;
+	rr:predicateObjectMap [
+		rr:predicate ontolex:writtenRep ;
+		rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;];
+
+
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;
+		rr:predicate ontolex:otherForm ;
+		rr:objectMap [
+			rr:parentTriplesMap <#LexicalEntryTriplesMap> ;
+			rr:joinCondition [
+				rr:child "e_id" ;
+				rr:parent "id" ;
+				rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ]]] ;
+.
+
+<#FormTriplesMapPronunciation>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+SELECT notation, pron, form_id FROM pronunciation limit 20;
+    """ ];
+	rr:subjectMap [
+		rr:template "http://exploreat.adaptcentre.ie/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;] ;
+	rr:predicateObjectMap [
+		rr:predicate ontolex:phoneticRep ;
+		rr:objectMap [ rr:column "pron" ;rr:language "notation";] ;
+		rr:graph <http://exploreat.adaptcentre.ie/WBOLexicon_graph> ;];
+
+.
+
+
+*/
