@@ -1,0 +1,114 @@
+2020-03-05 13:45:44 INFO  TriplesMap:72 - Processing TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#FormTriplesMapOriginal
+2020-03-05 13:45:44 INFO  LogicalTable:34 - Processing LogicalTable df140095c39a684d51fca98dd6536233
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 0651e1d2072672b6c005eb2635c0dcf6
+2020-03-05 13:45:44 INFO  SubjectMap:38 - Processing SubjectMap 0651e1d2072672b6c005eb2635c0dcf6
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7fe7
+2020-03-05 13:45:44 INFO  PredicateObjectMap:50 - Processing PredicateObjectMap 60f19328ae03eb7118388d2a39c297bd
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ff8
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff8
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7fe8
+2020-03-05 13:45:44 INFO  ObjectMap:35 - Processing ObjectMap 835660a2a0a2e32f620d53b8b59cdbcf
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 835660a2a0a2e32f620d53b8b59cdbcf
+2020-03-05 13:45:44 INFO  TriplesMap:72 - Processing TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexicalEntryCannonicalFormTriplesMap
+2020-03-05 13:45:44 INFO  LogicalTable:34 - Processing LogicalTable 61cfe9e523cd6ae5619f6f28152e69e7
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 69db998067d66caff8e152a20aa9b703
+2020-03-05 13:45:44 INFO  SubjectMap:38 - Processing SubjectMap 69db998067d66caff8e152a20aa9b703
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7fe9
+2020-03-05 13:45:44 INFO  PredicateObjectMap:50 - Processing PredicateObjectMap 6c6e401108de83ef016b872501e1cb90
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ffc
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ffc
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ffa
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ffa
+2020-03-05 13:45:44 INFO  ObjectMap:35 - Processing ObjectMap 054f34ad4a24a867b5d0447d6faccc55
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 054f34ad4a24a867b5d0447d6faccc55
+2020-03-05 13:45:44 INFO  TriplesMap:72 - Processing TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexicalEntryOtherFormTriplesMap
+2020-03-05 13:45:44 INFO  LogicalTable:34 - Processing LogicalTable 5f4a1f09d722e7b08e31c84e45d072eb
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap d70dcf17474e01740c72ebaa77cd013b
+2020-03-05 13:45:44 INFO  SubjectMap:38 - Processing SubjectMap d70dcf17474e01740c72ebaa77cd013b
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7fee
+2020-03-05 13:45:44 INFO  PredicateObjectMap:50 - Processing PredicateObjectMap 89559012be7025a11c5630b8da33addb
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ffb
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ffb
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ff5
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff5
+2020-03-05 13:45:44 INFO  ObjectMap:35 - Processing ObjectMap 3c51547abde24b9656abfe47c5d920eb
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 3c51547abde24b9656abfe47c5d920eb
+2020-03-05 13:45:44 INFO  TriplesMap:72 - Processing TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#FormTriplesMapNormalised
+2020-03-05 13:45:44 INFO  LogicalTable:34 - Processing LogicalTable 674c6defb3b11c79e951220318a8c1e0
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap ac0490919223ad26056cc6c1a382c947
+2020-03-05 13:45:44 INFO  SubjectMap:38 - Processing SubjectMap ac0490919223ad26056cc6c1a382c947
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff1
+2020-03-05 13:45:44 INFO  PredicateObjectMap:50 - Processing PredicateObjectMap 45d51b7ce085431a57fc36f23ba965a3
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ff9
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff9
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ff7
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff7
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7fed
+2020-03-05 13:45:44 INFO  ObjectMap:35 - Processing ObjectMap 394141a26da5794d8f6ffc9f4c7ae442
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 394141a26da5794d8f6ffc9f4c7ae442
+2020-03-05 13:45:44 INFO  PredicateObjectMap:50 - Processing PredicateObjectMap e32e9d6ecb7db63542e1e23ebb6b3383
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ff4
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff4
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7fe6
+2020-03-05 13:45:44 INFO  ObjectMap:35 - Processing ObjectMap 9adc6b8434048df6fb9107bb371ec352
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 9adc6b8434048df6fb9107bb371ec352
+2020-03-05 13:45:44 INFO  TriplesMap:72 - Processing TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexiconEntryTriplesMap
+2020-03-05 13:45:44 INFO  LogicalTable:34 - Processing LogicalTable 9314474bb7face505e8af61113b94998
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 4a376e6f1eb9e145b74c8bfdb8cb6e49
+2020-03-05 13:45:44 INFO  SubjectMap:38 - Processing SubjectMap 4a376e6f1eb9e145b74c8bfdb8cb6e49
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff0
+2020-03-05 13:45:44 INFO  PredicateObjectMap:50 - Processing PredicateObjectMap 0ed9c18e111b025130c37e5995eb0a29
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ff3
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff3
+2020-03-05 13:45:44 INFO  ObjectMap:35 - Processing ObjectMap 6cb76dcc2b70812816390cb7e0bdb8d8
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 6cb76dcc2b70812816390cb7e0bdb8d8
+2020-03-05 13:45:44 INFO  PredicateObjectMap:50 - Processing PredicateObjectMap 2d96e0383576298d09cdeedca32c775a
+2020-03-05 13:45:44 INFO  PredicateMap:30 - Processing PredicateMap -5fe8b458:170aaf1e01f:-7ff6
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7ff6
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap -5fe8b458:170aaf1e01f:-7feb
+2020-03-05 13:45:44 INFO  ObjectMap:35 - Processing ObjectMap 9e2d21684f186f8b78e05cf11e1c30b6
+2020-03-05 13:45:44 INFO  TermMap:77 - Processing TermMap 9e2d21684f186f8b78e05cf11e1c30b6
+2020-03-05 13:46:45 INFO  TriplesMap:148 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#FormTriplesMapOriginal: start generating triples.
+2020-03-05 13:47:44 INFO  TriplesMap:290 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#FormTriplesMapOriginal: generated triples = 2863716
+2020-03-05 13:48:40 INFO  TriplesMap:148 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexicalEntryCannonicalFormTriplesMap: start generating triples.
+2020-03-05 13:51:59 INFO  TriplesMap:290 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexicalEntryCannonicalFormTriplesMap: generated triples = 7241658
+2020-03-05 13:52:08 INFO  TriplesMap:148 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexicalEntryOtherFormTriplesMap: start generating triples.
+2020-03-05 13:52:24 INFO  TriplesMap:290 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexicalEntryOtherFormTriplesMap: generated triples = 587796
+2020-03-05 13:52:45 INFO  TriplesMap:148 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#FormTriplesMapNormalised: start generating triples.
+2020-03-05 13:56:08 INFO  TriplesMap:290 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#FormTriplesMapNormalised: generated triples = 10463620
+2020-03-05 13:56:13 INFO  TriplesMap:148 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexiconEntryTriplesMap: start generating triples.
+2020-03-05 13:59:57 INFO  TriplesMap:290 - TriplesMap file:///home/yabgaz/exploreat/TEI-XML_Mapping/ALL_TEI_XML/Mapping_TEI_XML_V3_1.ttl#LexiconEntryTriplesMap: generated triples = 7241658
+Thu Mar 05 13:59:57 GMT 2020 WARN: Caught while disconnecting...
+
+EXCEPTION STACK TRACE:
+
+
+
+** BEGIN NESTED EXCEPTION ** 
+
+javax.net.ssl.SSLException
+MESSAGE: closing inbound before receiving peer's close_notify
+
+STACKTRACE:
+
+javax.net.ssl.SSLException: closing inbound before receiving peer's close_notify
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:133)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:307)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:263)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:254)
+	at java.base/sun.security.ssl.SSLSocketImpl.shutdownInput(SSLSocketImpl.java:645)
+	at java.base/sun.security.ssl.SSLSocketImpl.shutdownInput(SSLSocketImpl.java:624)
+	at com.mysql.cj.protocol.a.NativeProtocol.quit(NativeProtocol.java:1312)
+	at com.mysql.cj.NativeSession.quit(NativeSession.java:182)
+	at com.mysql.cj.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:1750)
+	at com.mysql.cj.jdbc.ConnectionImpl.close(ConnectionImpl.java:720)
+	at r2rml.engine.R2RMLProcessor.closeDatabaseConnection(R2RMLProcessor.java:133)
+	at r2rml.engine.R2RMLProcessor.execute(R2RMLProcessor.java:56)
+	at r2rml.Main.main(Main.java:51)
+
+
+** END NESTED EXCEPTION **
+
+
+Writing dataset to one RDf file. Ignoring irrelevant parameters.

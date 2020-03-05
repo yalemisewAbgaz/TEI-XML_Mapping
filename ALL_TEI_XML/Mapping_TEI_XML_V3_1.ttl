@@ -1,0 +1,140 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>.
+@prefix lime: <http://www.w3.org/ns/lemon/lime#> .
+@prefix oldcan: <https://explorations4u.acdh.oeaw.ac.at/ontology/oldcan#>.
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix skos: <http://www.w3.org/2004/02/skos#>.
+@prefix wbo: <https://exploreat.oeaw.ac.at/>. 
+
+
+
+# This creates a lexicon called WBOLexicon
+# Please provide the name you would like to call this lexicon.
+# Created by Yalemisw Abgaz (yalemisew.abgaz@adaptcentre.ie)
+
+
+#This mapping also creates an entry and link each entry with the lexicon using ontolex:entry
+<#LexiconEntryTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select  'WBOLexicon' as lexicon, e.id, e.lang
+from entry e ;
+
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/{lexicon}" ;
+		rr:class ontolex:Lexicon ;
+		rr:graph wbo:lexicon_graph ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:language ;
+		rr:objectMap [ rr:column "lang" ] ;
+		rr:graph wbo:lexicon_graph;];
+	
+		
+	rr:predicateObjectMap [
+		rr:predicate ontolex:entry;
+		rr:objectMap [ 
+			rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:graph wbo:lexicon_graph ;] ;
+		];
+.
+
+
+
+# This creates a lexical entry and attach the lexical form, canonical form to it
+<#LexicalEntryCannonicalFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select  e.id, e.lang, f.entry_id, f.form_id from entry e
+left join form f on e.entry_id = f.entry_id
+where f.type ='hauptlemma';
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph wbo:lexicon_graph ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;	
+		rr:predicate ontolex:canonicalForm ;	
+		rr:objectMap [
+			rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+				rr:graph wbo:lexicon_graph ;];
+				] ;	
+.
+
+# This creates a lexical entry and attach the lexical form, and the other form to it
+<#LexicalEntryOtherFormTriplesMap>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+select  e.id, e.lang, f.entry_id, f.form_id from entry e
+left join form f on e.entry_id = f.entry_id
+where f.type <>'hauptlemma';
+    """ ];	
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
+		rr:class ontolex:LexicalEntry ;
+		rr:graph wbo:lexicon_graph ;] ;	
+	
+	rr:predicateObjectMap [
+		rr:predicate ontolex:lexicalForm ;	
+		rr:predicate ontolex:otherForm ;	
+		rr:objectMap [
+			rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+				rr:graph wbo:lexicon_graph; ];
+				] ;	
+.
+
+
+<#FormTriplesMapNormalised>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select o.orth_id, o.type, o.orth, f.form_id from
+form f inner join orth o on f.form_id =o.form_id
+where o.type<>'orig' ;
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph wbo:lexicon_graph ;] ;
+	rr:predicateObjectMap [
+		rr:predicate ontolex:writtenRep ;
+		rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+		rr:graph wbo:lexicon_graph ;];
+
+		rr:predicateObjectMap [
+			rr:predicate rdfs:label;
+			rr:predicate skos:preflabel;
+			rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+			rr:graph wbo:lexicon_graph ;] ;
+
+.
+
+<#FormTriplesMapOriginal>
+a rr:TriplesMap;
+rr:logicalTable [ rr:sqlQuery """
+
+Select o.orth_id, o.type, o.orth, f.form_id from
+form f inner join orth o on f.form_id =o.form_id
+where o.type='orig';
+    """ ];
+	rr:subjectMap [
+		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
+		rr:class ontolex:Form ;
+		rr:graph wbo:lexicon_graph ;] ;
+	
+		rr:predicateObjectMap [
+			rr:predicate skos:altlabel;
+			rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
+			rr:graph wbo:lexicon_graph ;] ;
+.
+

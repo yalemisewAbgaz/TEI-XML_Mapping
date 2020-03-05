@@ -8,137 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix skos: <http://www.w3.org/2004/02/skos#>.
-@prefix wbo: <https://exploreat.oeaw.ac.at/>. 
-
-
-
-# This creates a lexicon called WBOLexicon
-# Please provide the name you would like to call this lexicon.
-# Created by Yalemisw Abgaz (yalemisew.abgaz@adaptcentre.ie)
-
-
-#This mapping also creates an entry and link each entry with the lexicon using ontolex:entry
-<#LexiconEntryTriplesMap>
-a rr:TriplesMap;
-rr:logicalTable [ rr:sqlQuery """
-
-Select  'WBOLexicon' as lexicon, e.id, e.lang
-from entry e ;
-
-    """ ];	
-	rr:subjectMap [
-		rr:template "https://exploreat.oeaw.ac.at/{lexicon}" ;
-		rr:class ontolex:Lexicon ;
-		rr:graph wbo:lexicon_graph ;] ;	
-	
-	rr:predicateObjectMap [
-		rr:predicate ontolex:language ;
-		rr:objectMap [ rr:column "lang" ] ;
-		rr:graph wbo:lexicon_graph;];
-	
-		
-	rr:predicateObjectMap [
-		rr:predicate ontolex:entry;
-		rr:objectMap [ 
-			rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
-		rr:graph wbo:lexicon_graph ;] ;
-		];
-.
-
-
-
-# This creates a lexical entry and attach the lexical form, canonical form to it
-<#LexicalEntryCannonicalFormTriplesMap>
-a rr:TriplesMap;
-rr:logicalTable [ rr:sqlQuery """
-
-select  e.id, e.lang, f.entry_id, f.form_id from entry e
-left join form f on e.entry_id = f.entry_id
-where f.type ='hauptlemma';
-    """ ];	
-	rr:subjectMap [
-		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
-		rr:class ontolex:LexicalEntry ;
-		rr:graph wbo:lexicon_graph ;] ;	
-	
-	rr:predicateObjectMap [
-		rr:predicate ontolex:lexicalForm ;	
-		rr:predicate ontolex:canonicalForm ;	
-		rr:objectMap [
-			rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
-				rr:graph wbo:lexicon_graph ;];
-				] ;	
-.
-
-# This creates a lexical entry and attach the lexical form, and the other form to it
-<#LexicalEntryOtherFormTriplesMap>
-a rr:TriplesMap;
-rr:logicalTable [ rr:sqlQuery """
-
-select  e.id, e.lang, f.entry_id, f.form_id from entry e
-left join form f on e.entry_id = f.entry_id
-where f.type <>'hauptlemma';
-    """ ];	
-	rr:subjectMap [
-		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
-		rr:class ontolex:LexicalEntry ;
-		rr:graph wbo:lexicon_graph ;] ;	
-	
-	rr:predicateObjectMap [
-		rr:predicate ontolex:lexicalForm ;	
-		rr:predicate ontolex:otherForm ;	
-		rr:objectMap [
-			rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
-				rr:graph wbo:lexicon_graph; ];
-				] ;	
-.
-
-
-<#FormTriplesMapNormalised>
-a rr:TriplesMap;
-rr:logicalTable [ rr:sqlQuery """
-
-Select o.orth_id, o.type, o.orth, f.form_id from
-form f inner join orth o on f.form_id =o.form_id
-where o.type<>'orig' ;
-    """ ];
-	rr:subjectMap [
-		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
-		rr:class ontolex:Form ;
-		rr:graph wbo:lexicon_graph ;] ;
-	rr:predicateObjectMap [
-		rr:predicate ontolex:writtenRep ;
-		rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
-		rr:graph wbo:lexicon_graph ;];
-
-		rr:predicateObjectMap [
-			rr:predicate rdfs:label;
-			rr:predicate skos:preflabel;
-			rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
-			rr:graph wbo:lexicon_graph ;] ;
-
-.
-
-<#FormTriplesMapOriginal>
-a rr:TriplesMap;
-rr:logicalTable [ rr:sqlQuery """
-
-Select o.orth_id, o.type, o.orth, f.form_id from
-form f inner join orth o on f.form_id =o.form_id
-where o.type='orig';
-    """ ];
-	rr:subjectMap [
-		rr:template "https://exploreat.oeaw.ac.at/Form/{form_id}" ;
-		rr:class ontolex:Form ;
-		rr:graph wbo:lexicon_graph ;] ;
-	
-		rr:predicateObjectMap [
-			rr:predicate skos:altlabel;
-			rr:objectMap [ rr:column "orth" ;rr:language "bar";] ;
-			rr:graph wbo:lexicon_graph ;] ;
-.
-
-
+@prefix wbo: <https://exploreat.oeaw.ac.at/>.
 
 <#FormTriplesMapPronunciationIPA>
 a rr:TriplesMap;
@@ -186,18 +56,18 @@ rr:logicalTable [ rr:sqlQuery """
 
 select e.id, s.sense_id from
 entry e inner join sense s on e.entry_id= s.entry_id;
-    """ ];	
+    """ ];
 	rr:subjectMap [
 		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
 		rr:class ontolex:LexicalEntry ;
-		 ;] ;	
-	
+		 ;] ;
+
 	rr:predicateObjectMap [
-		rr:predicate ontolex:sense ;	
+		rr:predicate ontolex:sense ;
 		rr:objectMap [
 			rr:template "https://exploreat.oeaw.ac.at/Sense/{sense_id}" ;
 				rr:graph wbo:lexicon_graph ;];
-				] ;	
+				] ;
 .
 
 <#SenseTriplesMap>
@@ -211,12 +81,12 @@ on s.sense_id =sd.sense_id;
 		rr:template "https://exploreat.oeaw.ac.at/Sense/{sense_id}" ;
 		rr:class ontolex:LexicalSense ;
 		rr:graph wbo:lexicon_graph ;] ;
-	
+
 	rr:predicateObjectMap [
 	 rr:predicate skos:definition ;
 		rr:predicate dct:description ;
 		rr:objectMap [ rr:column "sense_definition";
-		rr:language "de"; ] ; # "de is used in all the columns" 
+		rr:language "de"; ] ; # "de is used in all the columns"
 		rr:graph wbo:lexicon_graph ;];
 
 .
@@ -244,18 +114,19 @@ WHEN   'adv adv' THEN 'adverb'
 ELSE 'Unknown'
 END lexinfopos
 from grammar_group g left join entry e on g.entry_id =e.entry_id;
-    """ ];	
+    """ ];
 	rr:subjectMap [
 		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
 		rr:class ontolex:LexicalEntry ;
-		rr:graph wbo:lexicon_graph ;] ;	
-	
+		rr:graph wbo:lexicon_graph ;] ;
+
 	rr:predicateObjectMap [
-		rr:predicate lexinfo:partOfSpeech ;	
+		rr:predicate lexinfo:partOfSpeech ;
 		rr:objectMap [
 			rr:template "http://www.lexinfo.net/ontology/2.0/lexinfo#{lexinfopos}" ;];
 			rr:graph wbo:lexicon_graph ;];
 .
+
 
 <#IsAnswerOfTriplesMap>
 a rr:TriplesMap;
@@ -271,12 +142,12 @@ and q.question_no=qid.nummer
 		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{entry_id}" ;
 		rr:class ontolex:LexicalEntry ;
 		rr:graph wbo:lexicon_graph ;] ;
-	
+
 	rr:predicateObjectMap [
 		rr:predicate oldcan:isAnswerOf;
 		rr:objectMap [ rr:template "https://exploreat-questionnaireexplorer.hephaistos.arz.oeaw.ac.at/Question/{question_id}" ;
 
-		] ; 
+		] ;
 		rr:graph wbo:lexicon_graph ;];
 
 .
@@ -296,16 +167,14 @@ and q.question_no=qid.nummer
 	rr:template "https://exploreat-questionnaireexplorer.hephaistos.arz.oeaw.ac.at/Question/{question_id}" ;
 	rr:class ontolex:LexicalEntry ;
 	rr:graph wbo:lexicon_graph ;] ;
-	
+
 	rr:predicateObjectMap [
 		rr:predicate oldcan:hasAnswer;
 		rr:objectMap [ 	rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{entry_id}" ;
-				] ; 
+				] ;
 		rr:graph wbo:lexicon_graph ;];
 
 .
-
-
 # This creates a etymology entry and attach the sense  to it
 <#LexicalEntryEtymTriplesMap>
 a rr:TriplesMap;
@@ -313,16 +182,17 @@ rr:logicalTable [ rr:sqlQuery """
 
 select e.id, et.text as etymtext from
 entry e inner join etymology et on e.entry_id= et.entry_id;
-    """ ];	
+    """ ];
 	rr:subjectMap [
 		rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
 		rr:class ontolex:LexicalEntry ;
-		 ;] ;	
-	
+		 ;] ;
+
 	rr:predicateObjectMap [
-		rr:predicate lexinfo:etymology ;	
+		rr:predicate lexinfo:etymology ;
 		rr:objectMap [ rr:column "etymtext";
-		rr:language "de"; ] ; # "de is used in all the columns" 
-				] ;	
+		rr:language "de"; ] ; # "de is used in all the columns"
+				] ;
 .
+
 
