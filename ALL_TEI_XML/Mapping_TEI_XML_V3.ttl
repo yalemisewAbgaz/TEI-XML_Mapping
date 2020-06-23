@@ -28,7 +28,7 @@ from entry e ;
     """ ];	
 	rr:subjectMap [
 		rr:template "https://exploreat.oeaw.ac.at/{lexicon}" ;
-		rr:class ontolex:Lexicon ;
+		rr:class lime:Lexicon ;
 		rr:graph wbo:lexicon_graph ;] ;	
 	
 	rr:predicateObjectMap [
@@ -38,7 +38,7 @@ from entry e ;
 	
 		
 	rr:predicateObjectMap [
-		rr:predicate ontolex:entry;
+		rr:predicate lime:entry;
 		rr:objectMap [ 
 			rr:template "https://exploreat.oeaw.ac.at/LexicalEntry/{id}" ;
 		rr:graph wbo:lexicon_graph ;] ;
